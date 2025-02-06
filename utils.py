@@ -6,10 +6,8 @@ from python_docx_replace import docx_replace
 def create_document(info: dict, path: str):
     document = Document()
     document = Document(path)
-
     docx_replace(document, **info)
-
-    document.save('demo.docx')
+    document.save('contract.docx')
 
 def process_config():
     with open('config.csv', encoding='utf-8', newline='') as file:

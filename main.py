@@ -26,11 +26,11 @@ def makeform(root, fields):
 
 
 root = tk.Tk()
-root.geometry("700x700")
+#root.geometry("700x700")
 root.title('Редактор документа')
 ents = makeform(root, fields)
 root.bind('<Return>', (lambda event, e=ents: processContract(e)))
-b1 = tk.Button(root, text='Show',
+b1 = tk.Button(root, text='Generate',
                command=(lambda e=ents: processContract(e)))
 b1.pack(side=tk.LEFT, padx=5, pady=5)
 b2 = tk.Button(root, text='Quit', command=root.quit)
